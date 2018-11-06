@@ -31,9 +31,7 @@ class _BannerScreenState extends State<BannerScreen>
       ),
     );
     dimension.addListener(() {
-      setState(() {
-        // if (_tickController.isCompleted) _tickController.reverse();
-      });
+      setState(() {});
     });
     _tickController.forward();
   }

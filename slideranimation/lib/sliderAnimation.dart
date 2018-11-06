@@ -174,13 +174,7 @@ class BoxState extends State<PhysicsBox> with TickerProviderStateMixin {
       var newValue = 160 * slidePercent;
       bannerText = newValue.floor();
       widget.onValueUpdate(newValue);
-      //         if (newValue > 40.0 && newValue < 60.0)
-      //           text = "UnderWeight";
-      //         if (newValue >= 60.0 && newValue <= 80.0)
-      //           text = "Balanced";
-      //         if (newValue > 80.0)
-      //           setState(() {
-      //             text = "OverWeight";
+
       point = (context.findRenderObject() as RenderBox)
           .globalToLocal(details.globalPosition);
 

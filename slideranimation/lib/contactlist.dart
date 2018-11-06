@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart' show timeDilation;
 
 class ContactScreen extends StatefulWidget {
   ContactScreen({
@@ -33,9 +32,7 @@ class _ContactScreenState extends State<ContactScreen>
       ),
     );
     opacity.addListener(() {
-      setState(() {
-        // if (_tickController.isCompleted) _tickController.reverse();
-      });
+      setState(() {});
     });
     _tickController.forward();
     _loaderController = new AnimationController(
@@ -73,8 +70,6 @@ class _ContactScreenState extends State<ContactScreen>
 
   @override
   Widget build(BuildContext context) {
-    // timeDilation = 0.5;
-
     Size screenSize = MediaQuery.of(context).size;
     return new Scaffold(
         body: new ListView(
@@ -90,7 +85,6 @@ class _ContactScreenState extends State<ContactScreen>
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       new Container(
-                          //  color: Colors.black,
                           height: 80 + dimension.value,
                           child: new Opacity(
                             opacity: _loaderController.value,
@@ -209,6 +203,5 @@ class List extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

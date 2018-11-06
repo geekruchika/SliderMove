@@ -42,9 +42,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
     );
     opacity.addListener(() {
-      setState(() {
-        // if (_tickController.isCompleted) _tickController.reverse();
-      });
+      setState(() {});
     });
     _tickController.forward();
   }
@@ -63,7 +61,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     Size screenSize = MediaQuery.of(context).size;
     timeDilation = 2.0;
     return new Scaffold(
-      // appBar: new AppBar(),
       body: new Container(
         width: screenSize.width,
         height: screenSize.height,
@@ -121,122 +118,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     child: new Stack(
                       alignment: Alignment.center,
                       children: <Widget>[
-                        // new Container(height: 30,width: 100,decoration: new BoxDecoration(
-                        //   borderRadius: new BorderRadius.
-                        // ),),
                         new SlideAnimation(
                           onValue: textVal,
                         ),
-                        // new Container(
-                        //   height: 3,
-                        //   margin: new EdgeInsets.only(bottom: 5),
-                        //   color: Color.fromRGBO(160, 160, 160, 1),
-                        // ),
-                        // new Positioned(
-                        //     bottom: 90,
-                        //     left: drag,
-                        //     child: new Container(
-                        //         padding: new EdgeInsets.only(
-                        //             top: 10.0,
-                        //             bottom: 10.0,
-                        //             left: 15.0,
-                        //             right: 15.0),
-                        //         margin: new EdgeInsets.only(bottom: 5),
-                        //         decoration: new BoxDecoration(
-                        //             color: !showBanner
-                        //                 ? Color.fromRGBO(255, 255, 255, 1)
-                        //                 : Color.fromRGBO(0, 0, 0, 1),
-                        //             borderRadius: new BorderRadius.all(
-                        //                 new Radius.circular(4.0))),
-                        //         child: new Row(
-                        //           children: <Widget>[
-                        //             new Text(
-                        //               bannerText.toString(),
-                        //               style: new TextStyle(
-                        //                   fontSize: 25,
-                        //                   color: showBanner
-                        //                       ? Color.fromRGBO(255, 255, 255, 1)
-                        //                       : Color.fromRGBO(0, 0, 0, 1)),
-                        //             ),
-                        //             new Text(
-                        //               " kg",
-                        //               style: new TextStyle(color: Colors.grey),
-                        //             ),
-                        //           ],
-                        //         ))),
-                        // new Positioned(
-                        //   top: 90,
-                        //   left: drag,
-                        //   child: new GestureDetector(
-                        //     onHorizontalDragStart: (DragStartDetails details) {
-                        //       dragStart = details.globalPosition;
-                        //       setState(() {
-                        //         showBanner = true;
-                        //       });
-                        //     },
-                        //     onHorizontalDragEnd: (DragEndDetails detail) {
-                        //       //  print(detail);
-                        //       setState(() {
-                        //         showBanner = false;
-                        //       });
-                        //     },
-                        //     onHorizontalDragUpdate: (DragUpdateDetails detail) {
-                        //       //  print(detail);
-                        //       var newPosition = detail.globalPosition.dx;
-                        //       setState(() {
-                        //         drag = newPosition - 40;
-                        //         slidePercent = (drag / FULL_TRANSITION_PX)
-                        //             .abs()
-                        //             .clamp(0.0, 1.0);
-
-                        //         var newValue = 160 * slidePercent;
-                        //         bannerText = newValue.floor();
-                        //         if (newValue > 40.0 && newValue < 60.0)
-                        //           text = "UnderWeight";
-                        //         if (newValue >= 60.0 && newValue <= 80.0)
-                        //           text = "Balanced";
-                        //         if (newValue > 80.0)
-                        //           setState(() {
-                        //             text = "OverWeight";
-                        //           });
-                        //       });
-                        //       print(slidePercent);
-                        //     },
-                        //     child: new Container(
-                        //       height: 15,
-                        //       width: 15,
-                        //       decoration: new BoxDecoration(
-                        //           shape: BoxShape.circle, color: Colors.black),
-                        //     ),
-                        //   ),
-                        // ),
-                        // new Slider(r
-                        //   activeColor: Colors.black,
-                        //   inactiveColor: Colors.transparent,
-                        //   max: 120.0,
-                        //   min: 40.0,
-                        //   value: distance,
-                        //   onChangeStart: (double val) {
-                        //     print("in");
-                        //   },
-                        //   onChangeEnd: (double val) {
-                        //     print("out");
-                        //   },
-                        //   onChanged: (double newValue) {
-                        //     setState(() {
-                        //       distance = newValue;
-
-                        //       if (newValue > 40.0 && newValue < 60.0)
-                        //         text = "UnderWeight";
-                        //       if (newValue >= 60.0 && newValue <= 80.0)
-                        //         text = "Balanced";
-                        //       if (newValue > 80.0)
-                        //         setState(() {
-                        //           text = "OverWeight";
-                        //         });
-                        //     });
-                        //   },
-                        // ),
                         new Positioned(
                           top: 150,
                           width: screenSize.width - 80,
@@ -277,24 +161,117 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             )
           ],
         ),
-        // child: new Column(
-        //   // mainAxisAlignment: MainAxisAlignment.center,
-        //   children: <Widget>[
-        //     new Container(
-        //       //   height: screenSize.height / 2,
-        //       child: new Text(
-        //         'You have pushed the button this many times:',
-        //       ),
-        //     ),
-        //     new Container(
-        //       // height: screenSize.height / 2,
-        //       child: new Text(
-        //         'You have pushed the button this many times:',
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }
 }
+// new Container(
+//   height: 3,
+//   margin: new EdgeInsets.only(bottom: 5),
+//   color: Color.fromRGBO(160, 160, 160, 1),
+// ),
+// new Positioned(
+//     bottom: 90,
+//     left: drag,
+//     child: new Container(
+//         padding: new EdgeInsets.only(
+//             top: 10.0,
+//             bottom: 10.0,
+//             left: 15.0,
+//             right: 15.0),
+//         margin: new EdgeInsets.only(bottom: 5),
+//         decoration: new BoxDecoration(
+//             color: !showBanner
+//                 ? Color.fromRGBO(255, 255, 255, 1)
+//                 : Color.fromRGBO(0, 0, 0, 1),
+//             borderRadius: new BorderRadius.all(
+//                 new Radius.circular(4.0))),
+//         child: new Row(
+//           children: <Widget>[
+//             new Text(
+//               bannerText.toString(),
+//               style: new TextStyle(
+//                   fontSize: 25,
+//                   color: showBanner
+//                       ? Color.fromRGBO(255, 255, 255, 1)
+//                       : Color.fromRGBO(0, 0, 0, 1)),
+//             ),
+//             new Text(
+//               " kg",
+//               style: new TextStyle(color: Colors.grey),
+//             ),
+//           ],
+//         ))),
+// new Positioned(
+//   top: 90,
+//   left: drag,
+//   child: new GestureDetector(
+//     onHorizontalDragStart: (DragStartDetails details) {
+//       dragStart = details.globalPosition;
+//       setState(() {
+//         showBanner = true;
+//       });
+//     },
+//     onHorizontalDragEnd: (DragEndDetails detail) {
+//       //  print(detail);
+//       setState(() {
+//         showBanner = false;
+//       });
+//     },
+//     onHorizontalDragUpdate: (DragUpdateDetails detail) {
+//       //  print(detail);
+//       var newPosition = detail.globalPosition.dx;
+//       setState(() {
+//         drag = newPosition - 40;
+//         slidePercent = (drag / FULL_TRANSITION_PX)
+//             .abs()
+//             .clamp(0.0, 1.0);
+
+//         var newValue = 160 * slidePercent;
+//         bannerText = newValue.floor();
+//         if (newValue > 40.0 && newValue < 60.0)
+//           text = "UnderWeight";
+//         if (newValue >= 60.0 && newValue <= 80.0)
+//           text = "Balanced";
+//         if (newValue > 80.0)
+//           setState(() {
+//             text = "OverWeight";
+//           });
+//       });
+//       print(slidePercent);
+//     },
+//     child: new Container(
+//       height: 15,
+//       width: 15,
+//       decoration: new BoxDecoration(
+//           shape: BoxShape.circle, color: Colors.black),
+//     ),
+//   ),
+// ),
+// new Slider(r
+//   activeColor: Colors.black,
+//   inactiveColor: Colors.transparent,
+//   max: 120.0,
+//   min: 40.0,
+//   value: distance,
+//   onChangeStart: (double val) {
+//     print("in");
+//   },
+//   onChangeEnd: (double val) {
+//     print("out");
+//   },
+//   onChanged: (double newValue) {
+//     setState(() {
+//       distance = newValue;
+
+//       if (newValue > 40.0 && newValue < 60.0)
+//         text = "UnderWeight";
+//       if (newValue >= 60.0 && newValue <= 80.0)
+//         text = "Balanced";
+//       if (newValue > 80.0)
+//         setState(() {
+//           text = "OverWeight";
+//         });
+//     });
+//   },
+// ),
